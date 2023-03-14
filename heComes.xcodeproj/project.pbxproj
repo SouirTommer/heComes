@@ -11,9 +11,9 @@
 		2AD0033E29C0591600CCCC96 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0033D29C0591600CCCC96 /* ContentView.swift */; };
 		2AD0034029C0591800CCCC96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AD0033F29C0591800CCCC96 /* Assets.xcassets */; };
 		2AD0034429C0591800CCCC96 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AD0034329C0591800CCCC96 /* Preview Assets.xcassets */; };
-		2AD0034E29C0591800CCCC96 /* heComesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0034D29C0591800CCCC96 /* heComesTests.swift */; };
-		2AD0035829C0591800CCCC96 /* heComesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0035729C0591800CCCC96 /* heComesUITests.swift */; };
-		2AD0035A29C0591800CCCC96 /* heComesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0035929C0591800CCCC96 /* heComesUITestsLaunchTests.swift */; };
+		2AD0036829C0594B00CCCC96 /* Sword in Frameworks */ = {isa = PBXBuildFile; productRef = 2AD0036729C0594B00CCCC96 /* Sword */; };
+		2AD0036B29C0596F00CCCC96 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 2AD0036A29C0596F00CCCC96 /* SwiftSoup */; };
+		2AD0036D29C0597900CCCC96 /* Commands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0036C29C0597800CCCC96 /* Commands.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,10 +41,8 @@
 		2AD0034129C0591800CCCC96 /* heComes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = heComes.entitlements; sourceTree = "<group>"; };
 		2AD0034329C0591800CCCC96 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2AD0034929C0591800CCCC96 /* heComesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = heComesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2AD0034D29C0591800CCCC96 /* heComesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = heComesTests.swift; sourceTree = "<group>"; };
 		2AD0035329C0591800CCCC96 /* heComesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = heComesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2AD0035729C0591800CCCC96 /* heComesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = heComesUITests.swift; sourceTree = "<group>"; };
-		2AD0035929C0591800CCCC96 /* heComesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = heComesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2AD0036C29C0597800CCCC96 /* Commands.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commands.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +50,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AD0036829C0594B00CCCC96 /* Sword in Frameworks */,
+				2AD0036B29C0596F00CCCC96 /* SwiftSoup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,8 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				2AD0033A29C0591600CCCC96 /* heComes */,
-				2AD0034C29C0591800CCCC96 /* heComesTests */,
-				2AD0035629C0591800CCCC96 /* heComesUITests */,
 				2AD0033929C0591600CCCC96 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -97,6 +95,7 @@
 			children = (
 				2AD0033B29C0591600CCCC96 /* heComesApp.swift */,
 				2AD0033D29C0591600CCCC96 /* ContentView.swift */,
+				2AD0036C29C0597800CCCC96 /* Commands.swift */,
 				2AD0033F29C0591800CCCC96 /* Assets.xcassets */,
 				2AD0034129C0591800CCCC96 /* heComes.entitlements */,
 				2AD0034229C0591800CCCC96 /* Preview Content */,
@@ -110,23 +109,6 @@
 				2AD0034329C0591800CCCC96 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		2AD0034C29C0591800CCCC96 /* heComesTests */ = {
-			isa = PBXGroup;
-			children = (
-				2AD0034D29C0591800CCCC96 /* heComesTests.swift */,
-			);
-			path = heComesTests;
-			sourceTree = "<group>";
-		};
-		2AD0035629C0591800CCCC96 /* heComesUITests */ = {
-			isa = PBXGroup;
-			children = (
-				2AD0035729C0591800CCCC96 /* heComesUITests.swift */,
-				2AD0035929C0591800CCCC96 /* heComesUITestsLaunchTests.swift */,
-			);
-			path = heComesUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +127,10 @@
 			dependencies = (
 			);
 			name = heComes;
+			packageProductDependencies = (
+				2AD0036729C0594B00CCCC96 /* Sword */,
+				2AD0036A29C0596F00CCCC96 /* SwiftSoup */,
+			);
 			productName = heComes;
 			productReference = 2AD0033829C0591600CCCC96 /* heComes.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +203,10 @@
 				Base,
 			);
 			mainGroup = 2AD0032F29C0591600CCCC96;
+			packageReferences = (
+				2AD0036629C0594B00CCCC96 /* XCRemoteSwiftPackageReference "Sword" */,
+				2AD0036929C0596F00CCCC96 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+			);
 			productRefGroup = 2AD0033929C0591600CCCC96 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -260,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AD0033E29C0591600CCCC96 /* ContentView.swift in Sources */,
+				2AD0036D29C0597900CCCC96 /* Commands.swift in Sources */,
 				2AD0033C29C0591600CCCC96 /* heComesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,7 +259,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AD0034E29C0591800CCCC96 /* heComesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,8 +266,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AD0035829C0591800CCCC96 /* heComesUITests.swift in Sources */,
-				2AD0035A29C0591800CCCC96 /* heComesUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,7 +403,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"heComes/Preview Content\"";
-				DEVELOPMENT_TEAM = 7ACHJ3BS97;
+				DEVELOPMENT_TEAM = T5VXR76LM4;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -453,7 +441,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"heComes/Preview Content\"";
-				DEVELOPMENT_TEAM = 7ACHJ3BS97;
+				DEVELOPMENT_TEAM = T5VXR76LM4;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -612,6 +600,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2AD0036629C0594B00CCCC96 /* XCRemoteSwiftPackageReference "Sword" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Azoy/Sword";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.2;
+			};
+		};
+		2AD0036929C0596F00CCCC96 /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2AD0036729C0594B00CCCC96 /* Sword */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2AD0036629C0594B00CCCC96 /* XCRemoteSwiftPackageReference "Sword" */;
+			productName = Sword;
+		};
+		2AD0036A29C0596F00CCCC96 /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2AD0036929C0596F00CCCC96 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2AD0033029C0591600CCCC96 /* Project object */;
 }
