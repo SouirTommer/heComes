@@ -14,6 +14,7 @@ struct ContentView: View {
     let bot = Sword(token: "add token here!")
     let date = Date()
     let df = DateFormatter()
+    @State private var presentAlert = false
     
     init(){
         df.dateFormat = "yyyy-MM-dd HH:mm"
@@ -61,18 +62,21 @@ struct ContentView: View {
                             
                             Button(action: {
                                 bot.send("老母不在 " + df.string(from: date), to: 1085133432193036358)
+                                presentAlert = true
                                 
                             }) {
                                 Circle()
                                     .fill(Color.red)
                                     .frame(width: 150, height: 150)
-                                    .overlay(Text("老母 Good")
+                                    .overlay(Text("老母黎咗 Good")
                                         .foregroundColor(.white)
                                         .font(.headline))
                                 
                                 
                             }
                                 .shadow(color: .gray, radius: 5, x: 0, y: 4)
+                                .buttonStyle(ClickEffectButtonStyle())
+                                .alert("幫你Discord call咗啦", isPresented: $presentAlert, actions: {})
                             
                             
                         )
@@ -96,6 +100,7 @@ struct ContentView: View {
                             
                             Button(action: {
                                 bot.send("老母黎咗 " + df.string(from: date), to: 1085133432193036358)
+                                presentAlert = true
                             }) {
                                 Circle()
                                     .fill(Color.red)
@@ -105,6 +110,8 @@ struct ContentView: View {
                                         .font(.headline))
                             }
                                 .shadow(color: .gray, radius: 5, x: 0, y: 4)
+                                .buttonStyle(ClickEffectButtonStyle())
+                                .alert("幫你Discord call咗啦", isPresented: $presentAlert, actions: {})
                         )
                         .offset(y:-100)
                     
@@ -122,9 +129,17 @@ struct ContentView: View {
         }
     }
 }
+struct ClickEffectButtonStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .opacity(configuration.isPressed ? 0.5 : 1.0)
+            .scaleEffect(configuration.isPressed ? 0.95 : 1.0)
+    }
+}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
+    
 }
