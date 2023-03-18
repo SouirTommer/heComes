@@ -44,88 +44,114 @@ struct ContentView: View {
     }
 
     var body: some View {
-        ZStack{
+        NavigationView {
             
-            Color(red: 181/255, green: 208/255, blue: 237/255)
-                .ignoresSafeArea(.all)
-            HStack(spacing: 30){
+            
+            ZStack{
                 
-                
-                VStack() {
-                    
-                    
-                    Rectangle()
-                        .fill(Color.white)
-                        .frame(width: 170, height: 250)
-                        .shadow(color: .gray, radius: 5, x: 0, y: 2)
-                        .overlay(
-                            
-                            Button(action: {
-                                bot.send("老母不在 " + df.string(from: date), to: 1085133432193036358)
-                                presentAlert = true
-                                
-                            }) {
-                                Circle()
-                                    .fill(Color.red)
-                                    .frame(width: 150, height: 150)
-                                    .overlay(Text("老母黎咗 Good")
-                                        .foregroundColor(.white)
-                                        .font(.headline))
-                                
-                                
-                            }
-                                .shadow(color: .gray, radius: 5, x: 0, y: 4)
-                                .buttonStyle(ClickEffectButtonStyle())
-                                .alert("幫你Discord call咗啦", isPresented: $presentAlert, actions: {})
-                            
-                            
-                        )
-                        .offset(y:-100)
-                    
-                    
-                    
-                }
-                
-                
-                
+                Color(red: 181/255, green: 208/255, blue: 237/255)
+                    .ignoresSafeArea(.all)
                 VStack(){
-                    
-                    
-                    
-                    Rectangle()
-                        .fill(Color.white)
-                        .frame(width: 170, height: 250)
-                        .shadow(color: .gray, radius: 5, x: 0, y: 2)
-                        .overlay(
+                    HStack(alignment: .top){
+                        Spacer()
+                        Button(action:{
                             
-                            Button(action: {
-                                bot.send("老母黎咗 " + df.string(from: date), to: 1085133432193036358)
-                                presentAlert = true
-                            }) {
-                                Circle()
-                                    .fill(Color.red)
-                                    .frame(width: 150, height: 150)
-                                    .overlay(Text("老母黎咗 Bad")
-                                        .foregroundColor(.white)
-                                        .font(.headline))
-                            }
-                                .shadow(color: .gray, radius: 5, x: 0, y: 4)
-                                .buttonStyle(ClickEffectButtonStyle())
-                                .alert("幫你Discord call咗啦", isPresented: $presentAlert, actions: {})
-                        )
-                        .offset(y:-100)
+                            print("hi")
+                        }){
+                            Image(systemName: "gearshape.fill")
+                                .resizable()
+                                .frame(width: 40, height: 40)
+                            
+                        }
+                        .foregroundColor(Color.white)
+                        .padding(.trailing, 15)
+                        .padding(.top, 5)
+                        
+                    }//.border(Color.green)
+                    Spacer()
+                }//.border(Color.black)
+                
+                HStack(spacing: 30){
+                    
+                    
+                    
+                    VStack() {
+                        
+                        
+                        Rectangle()
+                            .fill(Color.white)
+                            .frame(width: 170, height: 250)
+                            .shadow(color: .gray, radius: 5, x: 0, y: 2)
+                            .overlay(
+                                
+                                Button(action: {
+                                    bot.send("老母不在 " + df.string(from: date), to: 1085133432193036358)
+                                    presentAlert = true
+                                    
+                                }) {
+                                    Circle()
+                                        .fill(Color.red)
+                                        .frame(width: 150, height: 150)
+                                        .overlay(Text("老母黎咗 Good")
+                                            .foregroundColor(.white)
+                                            .font(.headline))
+                                    
+                                    
+                                }
+                                    .shadow(color: .gray, radius: 5, x: 0, y: 4)
+                                    .buttonStyle(ClickEffectButtonStyle())
+                                    .alert("幫你Discord call咗啦", isPresented: $presentAlert, actions: {})
+                                
+                                
+                            )
+                            .offset(y:-100)
+                        
+                        
+                        
+                    }
+                    
+                    
+                    
+                    VStack(){
+                        
+                        
+                        
+                        Rectangle()
+                            .fill(Color.white)
+                            .frame(width: 170, height: 250)
+                            .shadow(color: .gray, radius: 5, x: 0, y: 2)
+                            .overlay(
+                                
+                                Button(action: {
+                                    bot.send("老母黎咗 " + df.string(from: date), to: 1085133432193036358)
+                                    presentAlert = true
+                                }) {
+                                    Circle()
+                                        .fill(Color.red)
+                                        .frame(width: 150, height: 150)
+                                        .overlay(Text("老母黎咗 Bad")
+                                            .foregroundColor(.white)
+                                            .font(.headline))
+                                }
+                                    .shadow(color: .gray, radius: 5, x: 0, y: 4)
+                                    .buttonStyle(ClickEffectButtonStyle())
+                                    .alert("幫你Discord call咗啦", isPresented: $presentAlert, actions: {})
+                            )
+                            .offset(y:-100)
+                        
+                    }
+                }
+                VStack{
+                    Spacer()
+                    Image("image1")
+                        .resizable()
+                        .shadow(color: .black, radius: 5, x: 0, y: 4)
+                        .aspectRatio(contentMode: .fill)
+                        .frame(height: 100)
                     
                 }
-            }
-            VStack{
-                Spacer()
-                Image("image1")
-                    .resizable()
-                    .shadow(color: .black, radius: 5, x: 0, y: 4)
-                    .aspectRatio(contentMode: .fill)
-                    .frame(height: 100)
                 
-            }
+            }//.border(Color.red)
         }
     }
 }
