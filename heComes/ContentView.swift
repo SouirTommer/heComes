@@ -54,14 +54,12 @@ struct ContentView: View {
                 VStack(){
                     HStack(alignment: .top){
                         Spacer()
-                        Button(action:{
+                        
+                        NavigationLink(destination: SettingView()){
                             
-                            print("hi")
-                        }){
-                            Image(systemName: "gearshape.fill")
-                                .resizable()
-                                .frame(width: 40, height: 40)
-                            
+                                Image(systemName: "gearshape.fill")
+                                    .resizable()
+                                    .frame(width: 40, height: 40)
                         }
                         .foregroundColor(Color.white)
                         .padding(.trailing, 15)
